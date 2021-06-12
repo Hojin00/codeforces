@@ -1,20 +1,20 @@
 #include <bits/stdc++.h>
+#define CIA createArray
 
 using namespace std;
-vector<int> createArray(int n);
+
+
+vector<int> CIA(int n);
 int main(void)
 {
 
-	int num;
-	scanf("%d", &num);
-	vector<int> scores = createArray(num);
-
-	for(int a: scores){
-		cout << a << " ";
-	}
+	int M, N;
+    cin >> M >> N;
+    cout << M * N / 2 << endl;
+    return 0;
 }
 
-vector<int> createArray(int n){
+vector<int> CIA(int n){
 
 	vector<int> v;
 
