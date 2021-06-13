@@ -2,32 +2,34 @@
 
 using namespace std;
 vector<int> createArray(int n);
+
 int main(void)
 {
-	int num, target, score, passed; 
+	string str;
+	cin >> str;
 
-	scanf("%d %d", &num, &target);
+	int count = 1;
 
-	vector<int> scores = createArray(num);
+    for (size_t first = 1; first < str.length(); ++first) {
+    	
 
+    	if(str[first] == str[first - 1]){
+    		count++;
 
-	if(scores[0] == 0){
-		cout << "0";
-	} else {
-		score = scores[target-1];
+    		if(count == 7){
+    			cout << "YES";
 
-		for(int x: scores){
-			if(x == 0){
-				break;
-			} else {
-				if(x >= score){
-					passed++;
-				}
-			}
-			
-		}
-		cout << passed;
-	}//test
+    			return 0;
+    		}
+    	} else {
+    		count = 1;
+    	}
+
+    	
+
+    }
+
+    cout << "NO";
 	
 }
 
